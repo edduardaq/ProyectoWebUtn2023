@@ -4,23 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Música</title>
+    <title>ProyectoWeb</title>
+    <!--Aqui va los link de eduard que utilizo en el Body-->
+    <link rel="stylesheet" href="Css/heard.css">
     <link rel="stylesheet" href="/Css/CssTresFotosConZoom.css">
-    <link rel="stylesheet" href="/Css/BotonDeAyuda.css">
     
 </head>
 
 
-<header>
-<!-- Will aca, suerte will -->
+ <!--Aqui va el menu con sus div, nav-->
+ <header class="header"> <!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
+  <div class="logoBlackRose">
+<!---->            <img src="imagenes/Llogo.BlackRose.jpeg" alt="Logo BlackRose">
+  </div>
+  <nav>
+     <ul class="nav-links"> <!--Hice una clase para el css con el fin de darle disehno-->  
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+     </ul>            
+  </nav>
+   
+  <!--Boton del Login-->
+  <a class="btn" href="#"><button>Login</button></a>
 
- <h1>HOLA </h1>
-
+<!---->        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+                                                  <!--No tocar-->  
+<!---->         <div id="mobile-menu" class="overlay"> <!--Aqui contiene la logica implementada en JS para la minizacion de la pagina-->  
+<!---->            <a onclick="closeNav()" href="" class="close">&times;</a>
+<!---->            <div class="overlay-content">
+<!---->                <a href="#">Services</a>
+<!---->                <a href="#">Projects</a>
+<!---->                <a href="#">About</a>
+<!---->                <a href="#">Login</a>
+<!---->            </div>
+<!---->        </div>
 </header>
+<!--Este Scrip contiene el resposive en JS de la pagina en la parte del heard no es de la pagina completa
+
+    NO TOCAR
+-->
+
+<!----> <script type="text/javascript" src="nav.js"></script>
 
 
 <body>
             
+            
+    
+
     <div class="Contenedor">
         <div class="Carta">
             <img src="/Imagenes/Piano.png" alt="Imagen de piano" class="PrimerasTresImagenes">
