@@ -1,14 +1,20 @@
-/* .ImagenPrincipal{
-    width: 100%;
-    height: auto;
-    opacity: 0.3;    
-} */
+.contenedor div{
+    margin-right: 4%;
+  }
 
-.PrimerasTresImagenes{
-    width: 260px;
-    height: 360px;
-    position: relative;
+.contenedor img {
+    float: left;
+    width: 240px;
+    height: 340px;
+    /* position: relative;
     right: 50%;
-    left: 0%;
-    margin-right: 15%;
-}
+    left: 0%; */
+  }
+  
+
+  .contenedor h3 {
+    margin: 3%;
+    float: left;
+    display: inline;
+  }
+
