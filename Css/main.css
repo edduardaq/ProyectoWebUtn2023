@@ -1,8 +1,14 @@
-nsjinienfv
-gggggygygguihohhshuhuhsuhrhuhrueh
-erfehrfuherf
-erfojeworjfe
-enfeeufe
-eopofneu hasta aca
+/* .ImagenPrincipal{
+    width: 100%;
+    height: auto;
+    opacity: 0.3;    
+} */
 
-vftjhkvyjghb
+.PrimerasTresImagenes{
+    width: 260px;
+    height: 360px;
+    position: relative;
+    right: 50%;
+    left: 0%;
+    margin-right: 15%;
+}
