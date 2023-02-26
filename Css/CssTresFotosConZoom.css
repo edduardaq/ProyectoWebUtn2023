@@ -1,0 +1,68 @@
+/* html, body{
+    margin: 0;
+    padding: 0;
+} */
+
+/* body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+} */
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: aqua;
+    margin-top: 100px;
+    font-weight: 100;
+}
+
+
+.Contenedor{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.Contenedor .Carta{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+.Contenedor .Carta:hover{
+    transform: translate(-07px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Contenedor .Carta img{
+    width: 330px;
+    height: 220px;
+}
+
+.Contenedor .Carta h4{
+    font-weight: 6000;
+}
+
+.Contenedor .Carta p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Contenedor .Carta a{
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(151, 77, 77);
+}
