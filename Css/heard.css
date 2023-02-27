@@ -19,7 +19,7 @@ body{
 
 /*Aqui va la parte de divicion del header con su logo de BlackRose*/
 .header{
-    background-color: #0f252e;
+    background-color: #000000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -27,18 +27,18 @@ body{
     padding: 5px 10%;
 }
 
-.header .logoBlackRose{
+.header .LogoBlackRose{
     cursor: pointer;
     margin-right: auto;
 }
 
-.header .logoBlackRose img{
+.header .LogoBlackRose img{
     height: 70px;
     width: auto;
     transition: all 0.3s;
 }
 
-.header .logoBlackRose img:hover{
+.header .LogoBlackRose img:hover{
     transform: scale(1.2);
 }
 
