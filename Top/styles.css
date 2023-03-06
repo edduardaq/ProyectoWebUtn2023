@@ -4,6 +4,7 @@
     width: 100%;
     display: inline-block;
     justify-content: center;
+    margin-top: 35px;
 }
 
 .top h1, h4{
@@ -76,3 +77,6 @@ h1 span{
     margin: 0 0 0 0;
 }
 
+.TopTitulo{
+    font-size: 40px;
+}
