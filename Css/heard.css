@@ -33,7 +33,7 @@ body{
 }
 
 .header .LogoBlackRose img{
-    height: 70px;
+    height: 100px;
     width: auto;
     transition: all 0.3s;
 }
@@ -62,7 +62,7 @@ body{
 }
 
 .header .nav-links a:hover{
-    color: #09678d;
+    color: rgb(151, 77, 77);
 }
 
 /**/.menu {
@@ -76,7 +76,7 @@ body{
 /**/.header .menu button{
     margin-left: 20px;
     font-weight: 700;
-    color: #1b3039;
+    color: rgb(151, 77, 77);
     padding: 9px 25px;
     background: #eceff1;
     border: none;
@@ -88,7 +88,7 @@ body{
 .header .btn button:hover,
 /**/.header .menu button:hover{
     background-color: #e2f1f8;
-    color: #0f252e;
+    color:  rgb(151, 77, 77);
     transform: scale(1.1);
 }
 
@@ -119,7 +119,7 @@ body{
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgba(33, 49, 63, .95);
+    background-color:  rgb(151, 77, 77);
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -143,7 +143,7 @@ body{
 
 .header .overlay a:hover, 
 .header .overlay a:focus{
-    color: #09678d;
+    color:  rgb(9, 9, 9);
 }
 
 .header .overlay .close{
