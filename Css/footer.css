@@ -17,10 +17,8 @@ body{
 
 
 footer{
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 2rem 8%;
+    margin-top: -350px;
+    padding: 3rem 1%;
     background-color: black;
     display: flex;
     justify-content: center;
