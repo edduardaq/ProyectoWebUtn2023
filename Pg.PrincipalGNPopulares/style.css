@@ -3,11 +3,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+
+/*Css  William.Cubero*/
+
+
+
+/*CUERPO*/
 body{
     margin: 0%;
     background-color: #ffffff;
     color: #fff;
 }
+
+/*Esta area es el contenedor donde esta compuesto toda la parte de la estructura de las imagenes*/
 .container{
     padding-top: 20px;
     display: flex;
@@ -17,6 +26,9 @@ body{
     margin-top: 50px;
     gap: 10px;
 }
+
+
+/*Esta parte se encarga de darle estilo de radio difuminado a la carta "Imgaenes"*/
 .card-bg{
     width: 250px;
     height: 200px;
@@ -25,27 +37,37 @@ body{
     background-size: cover;
     position: relative;
 }
+
+/*Esta area es donde esta compuesto los nombres que salen arriba de la imgen, "TOP DESTACADO"*/
 .content{
     position: absolute;
     left: 0;
     padding: 25px;
 }
+
+/*Esta area es donde esta compuesto los nombres que salen arriba de la imgen, "TOP DESTACADO"*/
 .card-categories{
     font-size: 0.9rem;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
+/*Esta area es donde esta compuesto los estilos a donde se puntea el pulsor en la imagen, resalta*/
 .card:hover{
     transform: scale(1.1);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
+
+
+/*Esta area es donde esta compuesto los estilos a donde se puntea el pulsor en la imagen, resalta*/
 .container:hover > .card:not(:hover) .card-bg{
     filter: brightness(0.5) blur(10px);
 }
 
-.Letra{
+
+/*Tipado de letra "Nuestros Generos Mas Populares"*/
+.Letter{
    padding-top: 70px;
     display: flex;
     justify-content: center;
@@ -54,14 +76,10 @@ body{
     background-color: hsl(0, 0%, 100%);
     color: #000000;
     font-family: 'Poppins', sans-serif;
-
-
- 
 }
 
-
-
-.ColorN{
+/*Tipado de letra "Colores y estilos con su respectiva estructuras"*/
+.ColorsN{
     display: flex;
     justify-content: center;
     margin-left: 1px;
