@@ -23,11 +23,12 @@
 .Contenedor{
     width: 100%;
     max-width: 1200px;
-    height: 430px;
+    height: 520px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+    /* background-color: aqua; */
 }
 
 .Contenedor .Carta{
@@ -69,4 +70,18 @@
     font-weight: 500;
     text-decoration: none;
     color: rgb(151, 77, 77);
+}
+
+.Titulo{
+    color: rgb(0, 0, 0);
+    /* background-color: blue; */
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.Titulo h1{
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
 }
