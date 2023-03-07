@@ -53,7 +53,7 @@ footer{
     width: 50px;
     border-radius: 90px;
     border: 1px solid cornsilk;
-    background-image: url(/Imagenes/facebook_logo.png);
+    background-image: url(/F.Contacto/Imagenes/facebook_logo.png);
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
@@ -66,17 +66,17 @@ footer{
 }
 
 .social-icon:nth-of-type(2){
-    background-image: url(/Imagenes/instagram_logo.png);
+    background-image: url(/F.Contacto/Imagenes/instagram_logo.png);
     background-size: 50%;
 }
 
 .social-icon:nth-of-type(3){
-    background-image: url(/Imagenes/twitter_logo.png);
+    background-image: url(/F.Contacto/Imagenes/twitter_logo.png);
     background-size: 70%;
 }
 
 .social-icon:nth-of-type(4){
-    background-image: url(/Imagenes/youtube_logo.png);
+    background-image: url(/F.Contacto/Imagenes/youtube_logo.png);
     background-size: 90%;
 }
 
