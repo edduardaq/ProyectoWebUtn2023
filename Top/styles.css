@@ -1,10 +1,11 @@
 .top{
     background-color: rgb(167, 158, 147);
-    height: 600px;
+    height: 700px;
     width: 100%;
     display: inline-block;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 40px;
+    padding-top: 20px;
 }
 
 .top h1, h4{
@@ -23,7 +24,8 @@ h1 span{
 
 .hijo{
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    padding-top: 15px; 
 }
 
 .top .hijo div{
@@ -35,7 +37,6 @@ h1 span{
     position: relative;
     border-bottom: 2px solid rgb(40, 29, 29);  
     border-right: 2px solid black;
-    
 }
 
 
@@ -59,7 +60,7 @@ h1 span{
     display: inline-block;
     position: absolute;
     left: 100px;
-    top: -15px;
+    top: 0px;
 }
 
 .hijo div .texto{

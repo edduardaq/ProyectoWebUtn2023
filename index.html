@@ -5,301 +5,262 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoWeb</title>
-    <!--Aqui va los link de eduard que utilizo en el Body-->
+    <!--Aqui van los links de los css utilizados-->
     <link rel="stylesheet" href="Css/heard.css">
     <link rel="stylesheet" href="/Css/CssTresFotosConZoom.css">
     <link rel="stylesheet" href="/Css/footer.css">
     <link rel="stylesheet" href="/Top/styles.css">
     <link rel="stylesheet" href="/Pg.PrincipalGNPopulares/style.css">
     
-</head>
+</head> 
+    <!--Este Scrip contiene el resposive en JS de la pagina en la parte del heard no es de la pagina completa, NO TOCAR-->
+    <script type="text/javascript" src="nav.js"></script>
 
 
- <!--Aqui va el menu con sus div, nav-->
- <header class="header"> <!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
-  <div class="LogoBlackRose">
-    <!---->            <img src="Imagenes/LogoBlackRose.png" alt="Logo BlackRose">
-  </div>
-  <nav>
-     <ul class="nav-links"> <!--Hice una clase para el css con el fin de darle disehno-->  
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="/F.Contacto/FormularioContacto.html">Contactenos</a></li>
-     </ul>            
-  </nav>
-   
-  <!--Boton del Login-->
-  <a class="btn" href="/Login/Login.html"><button>Login</button></a>
+    <body>      
+        <!--Aqui va el menu con sus div, nav-->
+        <header class="header"> 
+            <div class="LogoBlackRose"><!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
+            <!---->            <img src="Imagenes/LogoBlackRose.png" alt="Logo BlackRose">
+            </div>
+            <nav>
+            <ul class="nav-links"> <!--Hice una clase para el css con el fin de darle disehno-->  
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="/F.Contacto/FormularioContacto.html">Contactenos</a></li>
+            </ul>            
+            </nav>
+            
+            <!--Boton del Login-->
+            <a class="btn" href="/Login/Login.html"><button>Login</button></a>
+        
+        <!---->        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+                                    <!--No tocar-->  
+        <!---->         <div id="mobile-menu" class="overlay"> <!--Aqui contiene la logica implementada en JS para la minizacion de la pagina-->  
+        <!---->            <a onclick="closeNav()" href="" class="close">&times;</a>
+        <!---->            <div class="overlay-content">
+        <!---->                <a href="#">Servicios</a>
+        <!---->                <a href="#">Proyectos</a>
+        <!---->                <a href="/F.Contacto/FormularioContacto.html">Contacto</a>
+        <!---->                <a href="/Login/Login.html">Login</a>
+        <!---->            </div>
+        <!---->        </div>
+        </header>
+        
+        <!--Esta seccion pertenece a las imagenes con "Leer más"-->
+        <div class="Contenedor">
+            <div class="Carta">
+                <img src="/Imagenes/Piano.png" alt="Imagen de piano" class="PrimerasTresImagenes">
+                <h4>Notas de piano</h4>
+                <p>Brindamos las mejores melodías de un piano para ti</p>
+                <a href="#">Leer más</a>
+            </div>
 
-<!---->        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-                          <!--No tocar-->  
-<!---->         <div id="mobile-menu" class="overlay"> <!--Aqui contiene la logica implementada en JS para la minizacion de la pagina-->  
-<!---->            <a onclick="closeNav()" href="" class="close">&times;</a>
-<!---->            <div class="overlay-content">
-<!---->                <a href="#">Servicios</a>
-<!---->                <a href="#">Proyectos</a>
-<!---->                <a href="/F.Contacto/FormularioContacto.html">Contacto</a>
-<!---->                <a href="/Login/Login.html">Login</a>
-<!---->            </div>
-<!---->        </div>
-</header>
-<!--Este Scrip contiene el resposive en JS de la pagina en la parte del heard no es de la pagina completa
+            <div class="Carta">
+                <img src="/Imagenes/Guitarra.jpg" alt="Imagen de guitarra" class="PrimerasTresImagenes">
+                <h4>Notas de guitarra</h4>
+                <p>Adquiere los mejores tonos existentes de guitarra con nosotros</p>
+                <a href="#">Leer más</a>
+            </div>
 
-    NO TOCAR
--->
-<!----> <script type="text/javascript" src="nav.js"></script>
+            <div class="Carta">
+                <img src="/Imagenes/GuitarraElectrica.jfif" alt="Imagen de guitara Electrica" class="PrimerasTresImagenes">
+                <h4>Notas de guitarra eléctrica</h4>
+                <p>Tenemos los mejores tonos de guitarra eléctrica para ti</p>
+                <a href="#">Leer más</a>
+            </div>
+        </div>
+        
+        <!--Esta seccion es la parte de los top canciones-->
+        <div class="top">
+            <h1 class="TopTitulo">Top <span class="TopTitulo">10 canciones</span> del mes</h1>
+            <h4>20 Febrero - 20 Marzo</h4>
+            <div class="hijo">
+                <div>
+                    <div class="img"><img src="/Top/images/Cordial.jpg" alt=""></div>
+                    <h2>1.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Abyssus Erigo</h3>
+                        <h3>Cordial</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/TV.jpg" alt="Imagen representativa"></div>
+                    <h2>2.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Billie Eilish</h3>
+                        <h3>TV</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/Chop suey.jpg" alt="Imagen representativa"></div>
+                    <h2>3.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">System Of A Down</h3>
+                        <h3>Chop Suey</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="linea"></div>
 
 
-<body>            
-    <div class="Contenedor">
-        <div class="Carta">
-            <img src="/Imagenes/Piano.png" alt="Imagen de piano" class="PrimerasTresImagenes">
-            <h4>Notas de piano</h4>
-            <p>Brindamos las mejores melodías de un piano para ti</p>
-            <a href="#">Leer más</a>
+            <div class="hijo">
+                <div>
+                    <div class="img"><img src="/Top/images/Invincible.jpg" alt="Imagen representativa"></div>
+                    <h2>4.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Machine Gun Kelly</h3>
+                        <h3>Invincible</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/I don´t need you.jpg" alt="Imagen representativa"></div>
+                    <h2>5.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Acid Ghost</h3>
+                        <h3>I don´t need you</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/Candy shop.jpg" alt="Imagen representativa"></div>
+                    <h2>6.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">50 cent</h3>
+                        <h3>Candy Shop</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="linea"></div>
+
+
+            <div class="hijo">
+                <div>
+                    <div class="img"><img src="/Top/images/Hey baby.jpg" alt="Imagen representativa"></div>
+                    <h2>7</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Stephen Marley</h3>
+                        <h3>Hey Baby</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/Old town road.jpg" alt="Imagen representativa"></div>
+                    <h2>8.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Lil Nas X</h3>
+                        <h3>Old Town Road</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img"><img src="/Top/images/Supehero.jpg" alt="Imagen representativa"></div>
+                    <h2>9.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Metro Boomin</h3>
+                        <h3>Superhero</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="linea"></div>
+
+
+            <div class="hijo">
+                <div>
+                    <div class="img"><img src="/Top/images/Creature.jpg" alt="Imagen representativa"></div>
+                    <h2>10.</h2>
+                    <div class="texto">
+                        <h3 class="nombre">Pop Smoke</h3>
+                        <h3>Creature</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="linea"></div>
+
         </div>
 
-        <div class="Carta">
-            <img src="/Imagenes/Guitarra.jpg" alt="Imagen de guitarra" class="PrimerasTresImagenes">
-            <h4>Notas de guitarra</h4>
-            <p>Adquiere los mejores tonos existentes de guitarra con nosotros</p>
-            <a href="#">Leer más</a>
-        </div>
+        <h5 class="Letter">Nuestros Generos Mas Populares</h5>
+        <div class="container"><!--Aqui van los Generos populares destacados de la pagina por mes-->
+            <div class="card"><!--Genero Regue-->
+                <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Regue.jfif')">
+                    <div class="content">
+                        <p class="card-categories">Top destacado</p>
+                        <h3 class="card-heading"></h3>
+                    </div>
+                </div>
+                <p class="ColorsN">Regue
+                </p>
+            </div> <!-- Termina Genero Regue-->
 
-        <div class="Carta">
-            <img src="/Imagenes/GuitarraElectrica.jfif" alt="Imagen de guitara Electrica" class="PrimerasTresImagenes">
-            <h4>Notas de guitarra eléctrica</h4>
-            <p>Tenemos los mejores tonos de guitarra eléctrica para ti</p>
-            <a href="#">Leer más</a>
-        </div>
-    </div>
+            
+            <div class="card"><!--Genero Chill Hop-->
+                <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/ChillHop.jfif')">
+                    <div class="content">
+                        <p class="card-categories">Top destacado</p>
+                        <h3 class="card-heading"></h3>
+                    </div>
+                </div>
+                <p class="ColorsN" > Chill Hop</p>
+            </div><!--Termina Genero Chill Hop-->
     
-    <div class="top">
-        <h1 class="TopTitulo">Top <span class="TopTitulo">10 canciones</span> del mes</h1>
-        <h4>20 Febrero - 20 Marzo</h4>
-        <div class="hijo">
-            <div>
-                <div class="img"><img src="/Top/images/Bix.jpg" alt=""></div>
-                <h2>1.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
+            <div class="card"><!--Genero Hip Hop-->
+                <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Hip\ Hop.jfif')">
+                    <div class="content">
+                        <p class="card-categories">Top destacado</p>
+                        <h3 class="card-heading"></h3>
+                    </div>
                 </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>2.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>3.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-        </div>
-        <div class="linea"></div>
-
-
-        <div class="hijo">
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>4.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>5.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>6.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-        </div>
-        <div class="linea"></div>
-
-
-        <div class="hijo">
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>7</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>8.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>9.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-        </div>
-        <div class="linea"></div>
-
-
-        <div class="hijo">
-            <div>
-                <div class="img"><img src="" alt="Imagen representativa"></div>
-                <h2>10.</h2>
-                <div class="texto">
-                    <h3 class="nombre">Cantante</h3>
-                    <h3>Nombre cancion</h3>
-                </div>
-            </div>
-        </div>
-        <div class="linea"></div>
-
-    </div>
-
-
-
-    <!--Aqui van los Generos populares destacados de la pagina por mes-->
-    <!---->  <!----> 
-    <!---->  <!----> 
-    <!----> <!-----> 
-     <!--Genero Regue-->
-     <h5 class="Letter">Nuestros Generos Mas Populares</h5>
-     <div class="container">
-         <div class="card">
-             <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Regue.jfif')">
-                 <div class="content">
-                     <p class="card-categories">Top destacado</p>
-                     <h3 class="card-heading"></h3>
-                 </div>
-             </div>
-             <p class="ColorsN">Regue
-             </p>
-         </div> <!-- Termina Genero Regue-->
-     <!---->  <!----> 
-     <!---->  <!----> 
-     <!----> <!-----> 
-          <!--Genero Chill Hop-->
-         <div class="card">
-             <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/ChillHop.jfif')">
-                 <div class="content">
-                     <p class="card-categories">Top destacado</p>
-                     <h3 class="card-heading"></h3>
-                 </div>
-             </div>
-             <p class="ColorsN" > Chill Hop</p>
-         </div><!--Termina Genero Chill Hop-->
- 
-     <!---->  <!----> 
-     <!---->  <!----> 
-     <!----> <!-----> 
-          <!--Genero Hip Hop-->
-         <div class="card">
-             <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Hip\ Hop.jfif')">
-                 <div class="content">
-                     <p class="card-categories">Top destacado</p>
-                     <h3 class="card-heading"></h3>
-                 </div>
-             </div>
-             <h4 class="ColorsN" > Hip Hop</h4>
-         </div><!--Termina Genero Hip Hop-->
- 
- 
-     <!---->  <!----> 
-     <!---->  <!----> 
-     <!----> <!-----> 
- 
-         <!--Genero Rock-->
-         <div class="card">
-             <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Rock.jfif')">
-                 <div class="content">
-                     <p class="card-categories">Top destacado</p>
-                     <h3 class="card-heading"></h3>
-                 </div>
-             </div>
-             <p class="ColorsN" >Rock </p>
-         </div> <!--Termina Genero Rock-->
- 
- 
-     <!---->  <!----> 
-     <!---->  <!----> 
-     <!----> <!-----> 
-     <!----> <!-----> 
- 
- 
- 
-          <!--Genero R & B-->
-         <div class="card">
-             <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/R&B.jfif')">
-                 <div class="content">
-                     <p class="card-categories">Top destacado</p>
-                     <h3 class="card-heading"></h3>
-                 </div>
-             </div>
-             <p class="ColorsN" >R & B </p>
-         </div> <!-- Termina Genero R & B-->
- 
- 
- 
-     <!---->  <!----> 
-     <!---->  <!----> 
-     <!----> <!-----> 
-     <!----> <!-----> 
-     </div>
- 
-     <!--Pagina principal-->
-     <!--Terminacion del codigo HTML de la parte del body Genero destacado -->
-
-    </html>
-</body>
-
-<footer>
+                <h4 class="ColorsN" > Hip Hop</h4>
+            </div><!--Termina Genero Hip Hop-->
     
-    <img src="/Imagenes/BRS_LOGO1.png" alt="" class="logo">
-    <div class="social-icons-container">
-        <a href="https://www.facebook.com/Black-Rose-100539064978886/" target="_blank" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
-        <a href="https://instagram.com/blackrose._sound?igshid=ZDdkNTZiNTM=" target="_blank" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
-        <a href="" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
-        <a href="" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
-    </div>
+            <div class="card"><!--Genero Rock-->
+                <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/Rock.jfif')">
+                    <div class="content">
+                        <p class="card-categories">Top destacado</p>
+                        <h3 class="card-heading"></h3>
+                    </div>
+                </div>
+                <p class="ColorsN" >Rock </p>
+            </div> <!--Termina Genero Rock-->
+    
+            <div class="card"><!--Genero R & B-->
+                <div class="card-bg" style="background-image:url('/Pg.PrincipalGNPopulares/ImagenesDeGeneroPopulares/R&B.jfif')">
+                    <div class="content">
+                        <p class="card-categories">Top destacado</p>
+                        <h3 class="card-heading"></h3>
+                    </div>
+                </div>
+                <p class="ColorsN" >R & B </p>
+            </div> <!-- Termina Genero R & B-->
 
-    <ul class="footer-menu-container">
-        <li class="menu-item">Legal</li>
-        <li class="menu-item">Privacy</li>
-        <li class="menu-item">Shipping</li>
-        <li class="menu-item">Refounds</li>
-    </ul>
-    <span class="copyright">&copy;2019, Black Rose Society. All rights reserved.   </span>
+        </div>
+        <!--Pagina principal-->
+        <!--Terminacion del codigo HTML de la parte del body Genero destacado -->
+
+        <footer>
+            <img src="/Imagenes/BRS_LOGO1.png" alt="" class="logo">
+            <div class="social-icons-container">
+                <a href="https://www.facebook.com/Black-Rose-100539064978886/" target="_blank" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
+                <a href="https://instagram.com/blackrose._sound?igshid=ZDdkNTZiNTM=" target="_blank" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
+                <a href="" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
+                <a href="" class="social-icon"> <img height="45" width="45" src="Imagenes/blank.png" alt=""></a>
+            </div>
+
+            <ul class="footer-menu-container">
+                <li class="menu-item">Legal</li>
+                <li class="menu-item">Privacy</li>
+                <li class="menu-item">Shipping</li>
+                <li class="menu-item">Refounds</li>
+            </ul>
+            <span class="copyright">&copy;2019, Black Rose Society. All rights reserved.   </span>
+        </footer>
+
+    </body>
 
 
-</footer>
 
 
 </html>
