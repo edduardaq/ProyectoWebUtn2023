@@ -48,7 +48,7 @@ footer{
     width: 50px;
     border-radius: 90px;
     border: 1px solid cornsilk;
-    background-image: url(/LasMembresias/Imagenes/facebook_logo.png);
+    background-image: url(/ProyectoWebUtn2023/LasMembresias/Imagenes/facebook_logo.png);
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
@@ -61,17 +61,17 @@ footer{
 }
 
 .social-icon:nth-of-type(2){
-    background-image: url(/LasMembresias/Imagenes/instagram_logo.png);
+    background-image: url(/ProyectoWebUtn2023/LasMembresias/Imagenes/instagram_logo.png);
     background-size: 50%;
 }
 
 .social-icon:nth-of-type(3){
-    background-image: url(/LasMembresias/Imagenes/twitter_logo.png);
+    background-image: url(/ProyectoWebUtn2023/LasMembresias/Imagenes/twitter_logo.png);
     background-size: 70%;
 }
 
 .social-icon:nth-of-type(4){
-    background-image: url(/LasMembresias/Imagenes/youtube_logo.png);
+    background-image: url(/ProyectoWebUtn2023/LasMembresias/Imagenes/youtube_logo.png);
     background-size: 90%;
 }
 
