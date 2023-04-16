@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoWeb</title>
     <link rel="icon" href="/ProyectoWebUtn2023/ImagenNavegador/LocoNavegador.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!--Aqui van los links de los css utilizados-->
     <link rel="stylesheet" href="/ProyectoWebUtn2023/Header/Header.css">
     <link rel="stylesheet" href="/ProyectoWebUtn2023/TresNavInstrumentos/CssTresFotosConZoom.css">
@@ -22,42 +24,12 @@
 
     <body>      
         <!--Aqui va el menu con sus div, nav-->
-        <header class="header"> 
-            <div class="LogoBlackRose"><!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
-            <!----><img src="/ProyectoWebUtn2023/Header/Imagenes/LogoBlackRose.png" alt="Logo BlackRose">
-            </div>
-            <nav>
-            <ul class="nav-links"> <!--Hice una clase para el css con el fin de darle disehno-->  
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Membresías</a></li>
-                    <li><a href="/ProyectoWebUtn2023/F.Contacto/FormularioContacto.html">Contactenos</a></li>
-
-
-                    <!--CARRITO DE COMPRAS USANDO BOOSTRAB-->
-                    <!--No tiene funcionalidad por el momento-->
-                    <li><a href="#" class="material-symbols-outlined">
-                        shopping_cart_checkout
-                     </a></li>
-                     <!--Cierre del carrito de compras usado con boostrap-->
-            </ul>            
-            </nav>
-            
-            <!--Boton del Login-->
-            <a class="btn" href="/ProyectoWebUtn2023/Login/Login.html"><button>Login</button></a>
-        
-        <!---->        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-                                    <!--No tocar-->  
-        <!---->         <div id="mobile-menu" class="overlay"> <!--Aqui contiene la logica implementada en JS para la minizacion de la pagina-->  
-        <!---->            <a onclick="closeNav()" href="" class="close">&times;</a>
-        <!---->            <div class="overlay-content">
-        <!---->                <a href="#">Servicios</a>
-        <!---->                <a href="#">Proyectos</a>
-        <!---->                <a href="/ProyectoWebUtn2023/F.Contacto/FormularioContacto.html">Contacto</a>
-        <!---->                <a href="/ProyectoWebUtn2023/Login/Login.html">Login</a>
-        <!---->            </div>
-        <!---->        </div>
-        </header>
+        <script>
+            $(function(){
+              $("#header").load("/ProyectoWebUtn2023/Header/header.html");
+            });
+          </script>
+          <div id="header"></div>
         
         <!--Esta seccion pertenece a las imagenes con "Leer más"-->
         <div class="Contenedor">
@@ -277,23 +249,12 @@
         <!--Terminacion del codigo HTML de la parte del body Genero destacado -->
 
         
-        <footer>
-            <img src="/ProyectoWebUtn2023/Footer/Imagenes/BRS_LOGO1.png" alt="" class="logo">
-            <div class="social-icons-container">
-                <a href="https://www.facebook.com/Black-Rose-100539064978886/" target="_blank" class="social-icon"> <img height="45" width="45" src="/ProyectoWebUtn2023/Footer/Imagenes/blank.png" alt=""></a>
-                <a href="https://instagram.com/blackrose._sound?igshid=ZDdkNTZiNTM=" target="_blank" class="social-icon"> <img height="45" width="45" src="/ProyectoWebUtn2023/Footer/Imagenes/blank.png" alt=""></a>
-                <a href="" class="social-icon"> <img height="45" width="45" src="/ProyectoWebUtn2023/Footer/Imagenes/blank.png" alt=""></a>
-                <a href="" class="social-icon"> <img height="45" width="45" src="/ProyectoWebUtn2023/Footer/Imagenes/blank.png" alt=""></a>
-            </div>
-
-            <ul class="footer-menu-container">
-                <li class="menu-item">Legal</li>
-                <li class="menu-item">Privacy</li>
-                <li class="menu-item">Shipping</li>
-                <li class="menu-item">Refounds</li>
-            </ul>
-            <span class="copyright">&copy;2019, Black Rose Society. All rights reserved.   </span>
-        </footer>
-
+        <script>
+            $(function(){
+              $("#footer").load("/ProyectoWebUtn2023/Footer/footer.html");
+            });
+          </script>
+          <div id="footer"></div>
+        
     </body>
 </html>
