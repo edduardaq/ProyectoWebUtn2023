@@ -4,9 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 /*Css  William.Cubero*/
-
 
 
 /*CUERPO*/
@@ -20,13 +18,14 @@ body{
 .container{
     padding-top: 20px;
     display: flex;
-    min-height: 100vh;
     justify-content: center;
     margin-left: 50px;
     margin-top: 50px;
-    gap: 10px;
+    margin-bottom: 400px;
+    /* background-color: rgb(255, 94, 0); */
+    width: 90%;
+    height: 40%;
 }
-
 
 /*Esta parte se encarga de darle estilo de radio difuminado a la carta "Imgaenes"*/
 .card-bg{
@@ -59,12 +58,10 @@ body{
     transition: all 0.2s ease-in-out;
 }
 
-
 /*Esta area es donde esta compuesto los estilos a donde se puntea el pulsor en la imagen, resalta*/
 .container:hover > .card:not(:hover) .card-bg{
     filter: brightness(0.5) blur(10px);
 }
-
 
 /*Tipado de letra "Nuestros Generos Mas Populares"*/
 .Letter{
@@ -87,4 +84,11 @@ body{
     background-color: hsl(0, 0%, 100%);
     color: #000000;
     font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    width: auto;
+    height: 90%;
+    /* background-color: aquamarine; */
+    margin: 1px;
 }
