@@ -1,0 +1,448 @@
+
+/*CSS PARA EL BODY, INTEGRA UN FONDO DE PANTALLA ESTATICO
+*/
+.body{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.678)), url("img/background_BlackRose.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh; /* ajusta la altura del cuerpo a la altura de la ventana gráfica */
+    background-attachment: fixed;
+}
+
+/*CSS PARA NAV
+*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  height: 60px;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  margin-left: 20%;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+/*FIN DE CSS PARA NAV
+*/
+
+
+/*MEDIA QUERY PARA PANTALLAS MAS PEQUEÑAS (RESPONSIVIDAD)*/
+@media (max-width: 720px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  /* ajustar tamaño del logo */
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* ajustar tamaño del texto */
+  .menu li a {
+    font-size: 14px;
+  }
+  
+  /* ajustar posición de los elementos */
+  .menu {
+    margin-right: 0;
+  }
+  
+  /* ajustar tamaño del botón de búsqueda */
+  .form-control {
+    min-width: 200px;
+  }
+}
+
+/*CSS PARA EL SUBTITULO DE LOS ARTISTAS
+*/
+.subtexto {
+    font-size: 0.8em; /* Tamaño de letra reducido */
+    display: block; /* Hace que el subtexto ocupe toda la anchura disponible */
+    margin-top: 0.5em; /* Ajusta la separación entre el párrafo y el subtexto */
+  }
+
+
+/*CSS PARA LAS IMAGENES DE ALBUMS DENTRO DE LOS CARDS
+*/
+  .contenedor_imagen {
+    display: flex;
+  }
+  img {
+    width: 15%;
+    max-width: 100%;
+    max-width: 100%;
+    min-width: 26%;
+    min-height: 26%;
+  }
+  h2, p {
+    flex: 1;
+  }
+  /*FIN DE CSS PARA IMAGENES DE LOS CARDS
+*/
+
+/*CSS PARA IMAGEN DE CARRITO DE COMPRAS
+*/
+  .contenedor_imagen_compra img {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+  }
+  .contenedor_imagen_compra a {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+/*FIN DE CSS PARA IMAGEN DE CARRITO DE COMPRAS
+*/
+
+
+/*CSS PARA CONFIGURAR LOS ELEMENTOS QUE SE ENCUENTRAN DEBAJO DE EL ALBUM, ES DECIR EL CONTENEDOR QUE ALMACENA EL CONTENEDOR DE LAS 3 IMAGENES
+Y EL CONTENEDOR DE EL REPRODUCTOR DE MUSICA Y LOS POSICIONA UNO AL LADO DE EL OTRO
+*/
+  .ContenedorMusicaLogos {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los elementos se ajusten automáticamente cuando hay poco espacio */
+    justify-content: space-between; /* Esto separa los dos div en los extremos del contenedor */
+    align-items: center; /* Esto centra verticalmente los elementos dentro del contenedor */
+    width: 100%;
+    text-align: center; /* Centra los divs horizontalmente */
+}
+.div1, .div2 {
+  display: inline-block;
+  width: 48%; 
+  margin: 1%; /* Agrega un margen entre los divs */
+}
+.div2{
+    margin-right: 30%;
+}
+/*FIN DE CSS PARA CONTENEDORMUSICALOGOS
+*/
+
+/*CSS CONTENEDOR PARA DAR SOPORTE
+*/
+.contenedor_Inicio {
+  display: flex;
+  justify-content: space-between;
+}
+/*FIN DE CONTENEDOR DE SOPORTE
+*/
+
+/*CSS DE TARJETA DE TENDENCIAS
+*/
+.tarjTendencia{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/bg_1.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+/*FIN DE CSS TARJETA DE TENDENCIAS
+*/
+
+/*CSS TARJETA DE BUSQUEDA
+*/
+.tarjBusqueda{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/bg_2.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+/*FIN DE CSS TARJETA DE BUSQUEDA
+*/
+
+
+/*CSS PARA TARJETAS MUSICALES, LES ATRIBUYE UN FONDO DE IMAGEN ESPECIFICO PARA CADA TARJETA
+*/
+.tarjeta1{
+    background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card4.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño del card */
+    background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta2{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card1.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta3{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card2.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta4{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card3.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta5{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card10.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta6{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card9.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta7{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card11.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta8{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card14.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta9{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card12.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta10{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card15.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta11{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/album9.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta12{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card16.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta13{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card22.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta14{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card25.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta15{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card24.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta16{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card26.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta17{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card27.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta18{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card28.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+
+.tarjeta19{
+  background-image: linear-gradient( to bottom right ,rgba(0,0,0,10), rgba(0,0,0,0.5)), url('img/card29.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del card */
+  background-position: center center; /* Centra la imagen en el card */
+}
+/*FIN DE CSS'S PARA TARJETAS MUSICALES
+*/
+
+/*CSS PARA BORDES LUMINOSOS Y SOMBRAS DE TARJETAS
+*/
+.card-hover:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px white;
+  }
+
+.card{
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.3);
+  }
+/*FIN DE CSS PARA BORDES LUMINOSOS Y SOMBRAS
+*/
+
+/*CSS PARA IMAGENES/ALBUMES DE TARJETAS
+*/
+.d-flex {
+  display: flex;
+  max-width: 16%;
+  justify-content: space-between;
+  align-items: center;
+  }
+      
+.d-flex img {
+  max-width: 33%;
+  height: auto;
+  }
+/*FIN DE CSS IMAGENES/ALBUMES DE TARJETAS
+*/
+
+/*CSS PARA ANIMACION DE DESVANECIMIENTO
+*/
+.fade {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  }
+      
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+  }
+/*FIN DE CSS PARA ANIMACION DE DESVANECIMIENTO
+*/
+
+/*CSS PARA REPRODUCTOR DE MUSICA
+*/
+  audio::-webkit-media-controls-play-button {
+    font-size: 20px;
+  }
+  
+  audio::-webkit-media-controls-time-remaining-display {
+    font-size: 16px;
+  }
+  
+  audio::-webkit-media-controls-current-time-display {
+    font-size: 16px;
+  }
+/*CSS PARA REPRODUCTOR DE MUSICA
+*/
+
+/*CSS PARA CONTENEDOR DE LA ANIMACION DE PARTICULAS
+*/
+  .particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .particle-container.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  #particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  #particles-container {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #particles-container.show {
+    opacity: 1;
+  }
+  /*FIN DE CSS PARA CONTENEDOR DE LA ANIMACION DE PARTICULAS
+*/
+
+/*CSS PARA SEGUNDO CONTENEDOR DE LA ANIMACION DE PARTICULAS, FUE DESACTIVADO POR PROBLEMAS DE SATURACION DENTRO DE LA PAGINA
+  PERO ESTA DISPONIBLE PARA FUTUROS ARREGLOS Y RE INTEGRACION
+*/
+
+/*
+  .particle-container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .particle-container2.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  #particles-container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  #particles-container2 {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #particles-container2.show2 {
+    opacity: 1;
+  }
+*/
+
+/*CSS PARA OCULTAR LAS TARJETAS QUE NO COINCIDEN CON LO QUE EL USUARIO BUSCA
+*/
+  .hidden {
+    display: none;
+  }
+
+  
+
+  
+
+
+  

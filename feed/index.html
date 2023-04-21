@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--ENLACE BOOTSTRAP-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--ENLACES JS-->
+    <link rel="stylesheet" href="style.css">
+    <!--SCRIPTS JS-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Feed_Black_Rose_Society</title>
+</head>
+
+<!-- -->
+<body class="body">
+    <!--NAVEGADOR DE BUSQUEDA, INTEGRADO PARA FILTRAR LOS CARDS MUSICALES QUE SE ENCUENTREN DENTRO DE EL
+        CODIGO
+    -->
+    <nav style="background-color: rgb(10, 10, 10);">
+        <!--CONTENEDOR DE LOGO-->
+        <div class="logo">
+          <img src="img/brs_logo2.png" alt="Logo">
+        </div>
+        <!--CONTENEDOR DEL FORMS-->
+        <div>
+            <form class="form-inline my-2 my-lg-0 w-100">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" id="search-input" aria-label="Buscar" style="min-width: 400px;">
+                <button class="btn btn-outline-light my-2 my-sm-0" onclick="searchCards(document.querySelector('.form-control').value)" type="submit">Buscar</button>
+              </form>
+        </div>
+        <!--LISTA DE ELEMENTOS DENTRO DEL NAV, SE ENCUENTRAN EN HORIZONTAL -->
+        <ul class="menu" style="margin-right: 5%;">
+          <li><a href="#" class="text-light">Inicio</a></li>
+          <li><a href="#" class="text-light">Acerca de</a></li>
+        </ul>
+      </nav>
+      
+      <!--CONTENEDOR PRINCIPAL PARA TITULO DE BIENVENIDA, BOTON DE DROPDOWN, CONTENEDOR 1 Y 2 -->
+	<div class="container-fluid">
+        <div class="contenedor_Inicio">
+            <div class="div1">
+              <h1 class="text-light fade" >Your Feed</h1>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" style="margin-top: 15%;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Genero
+              </button>
+              <!--LOS GENEROS MUSICALES QUE SE ENCUENTRAN DENTRO DEL DROPDOWN -->
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" data-genre="todos">Todos</a>
+                <a class="dropdown-item" href="#" data-genre="drill">Drill</a>
+                <a class="dropdown-item" href="#" data-genre="Trap">Trap</a>
+                <a class="dropdown-item" href="#" data-genre="Rock">Rock</a>
+                <a class="dropdown-item" href="#" data-genre="BoomBap">Boombap</a>
+                <a class="dropdown-item" href="#" data-genre="Hip-Hop">Hip-Hop</a>
+                <a class="dropdown-item" href="#" data-genre="Reggaeton">Reggaeton</a>
+              </div>
+            </div>
+          </div>          
+		<hr>
+        <!--PRIMER CONTENEDOR QUE CONTIENE TARJETAS "BUSQUEDAS DE TENDENCIA" Y "QUIENES SEGUIR" ESTE CONTENEDOR ESTA CONFIGURADO PARA
+            ENCONTRARSE A LA IZQUIERDA DE LA PAGINA, ESTO PARA DAR ESPACIO Y SE ENCUENTRE JUNTO AL CONTENEDOR QUE ALMACENA LAS TARJAS MUSICALES
+        -->
+        <div class="row">
+            <!--CONTENEDOR "BUSQUEDAS DE TENDENCIA" ESTE CONTENEDOR LLEVA LA CLASE "GENERAL" Y CUMPLE LA FUNCION DE MOSTRARSE SIEMPRE SIN IMPORTAR
+                    EL RESULTADO DE UN FILTRO REALIZADO POR EL USUARIO Y LLEVA UN COLOR DE FONDO POR DEFECTO -->
+			<div class="col-md-3">
+				<div class="card general tarjTendencia"style="background-color: rgb(31, 27, 27);">
+					<div class="card-body">
+						<h5 class="card-title text-light" style="padding-bottom: 5%;">Busquedas de tendencia</h5>
+						<p class="card-text text-light" style="padding-bottom: 5%;">21 Savage <sub class="subtexto">Patrocinado</sub></p>
+                        <p class="card-text text-light" style="padding-bottom: 5%;">SoundsEffects <sub class="subtexto">233.3k busquedas</sub></p>
+                        <p class="card-text text-light" style="padding-bottom: 5%;">Post Malone <sub class="subtexto">Patrocinado</sub></p>
+                        <p class="card-text text-light" style="padding-bottom: 5%;">Drumkits <sub class="subtexto">50.8k busquedas</sub></p>
+                        <p class="card-text text-light" style="padding-bottom: 5%;">Piano <sub class="subtexto">20.1k busquedas</sub></p>
+					</div>
+				</div>
+                <br>
+                <!--CONTENEDOR "A QUIENES SEGUIR" ESTE CONTENEDOR LLEVA LA CLASE "GENERAL" Y CUMPLE LA FUNCION DE MOSTRARSE SIEMPRE SIN IMPORTAR
+                    EL RESULTADO DE UN FILTRO REALIZADO POR EL USUARIO Y LLEVA UN COLOR DE FONDO POR DEFECTO
+                -->
+                <div class="card general tarjBusqueda" style="background-color: rgb(31, 27, 27);">
+					<div class="card-body">
+						<h5 class="card-title text-light general" style="padding-bottom: 5%;" data-genre="general">Quienes seguir</h5>
+                        <!--CADA DIV, POSEE DENTRO OTRO PAR DE DIV LOS CUALES ALMACENAN LA INFORMACION DE EL ARTISTA Y UN BOTON DE SEGUIMIENTO
+                            AMBOS ESTAN SEPARADOS Y CONFIGURADOS DE FORMA QUE SE ENCUENTREN UNO AL LADO DE OTRO
+                        -->
+                        <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                              <p class="card-text text-light" style="padding-bottom: 10%;">Billie Eilish <sub class="subtexto">1.9m seguidores</sub></p>  
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">TheMafiousOne <sub class="subtexto">233.3k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">LuciusAzriel <sub class="subtexto">80k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">WilliamIceCube <sub class="subtexto">50.8k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">EduardBellacox <sub class="subtexto">990.1k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">NOXERO <sub class="subtexto">45.1k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+                          <div style="display: flex; justify-content: space-between; padding-bottom: 5%;">
+                            <div style="flex-grow: 1;">
+                                <p class="card-text text-light" style="padding-bottom: 10%;">BustaRhymes <sub class="subtexto">222.1k seguidores</sub></p>
+                            </div>
+                            <div>
+                              <button class="btn btn-outline-light btn-sm">Seguir</button>
+                            </div>
+                          </div>
+					</div>
+				</div>
+			</div>
+
+
+            <!--------------------------------------------------------------------------------------------------------------------------------->
+
+
+            <!--EL SEGUNDO CONTENEDOR EL CUAL ALMACENA LAS TARJETAS MUSICALES, ESTE CONTENEDOR SE ENCUENTRA A LA DERECHA DE EL CONTENEDOR 1 EL CUAL
+                ALMACENA LAS TARJETAS DE BUSQUEDA Y A QUIENES SEGUIR
+            -->
+            <!--CADA TARJETA MUSICAL SE ENCUENTRA DENTRO DE UNA LISTA, ESTO CON EL PROPOSITO DE MOSTRAR CADA TARJETA DE FORMA VERTICAL Y NO HORIZONTAL
+                COMPLETAMOS EL NUMERO DE COLUMNAS CON 9 PARA QUE DE ESTA FORMA SE ACOPLE PROPORCIONALMENTE A LA PANTALLA DE LA PAGINA WEB
+             -->
+            <ul class="col-md-9">
+                <!--PRIMERA TARJETA DE LA LISTA, CADA UNA DE LAS TARJETAS MUSICALES FORMA PARTE DE LA CLASE "MEDIA", LA CLASE MEDIA PERMITE ADAPTAR
+                    CADA TARJETA AL TAMAÑO DE LA PANTALLA EN LA CUAL SE ESTEN OBSERVANDO, ASI MISMO AJUSTA EL TAMAÑO DE LOS TEXTOS Y OTROS ELEMENTOS
+                    QUE SE ENCUENTREN DENTRO DE EL MISMO
+                -->
+                <li class="media">
+                    <!--TARJETAS INTEGRADAS CON BOOTSTRAP LE AGREGAN UN DISEÑO MAS HERMOSO, LA CLASE CARD HOVER PERMITE QUE LA TARJETA TENGA SOMBRA Y SU BORDE
+                        SE ILUMINE CUANDO EL RATON SE ENCUENTRE SELECCIONANDO O ESTE POSICIONANDO POR ENCIMA DE ESTE, LA CLASE TARJETA 1 PERMITE IDENTIFICAR
+                        CUAL NUMERO DE TARJETA ES Y DISTINGUIRLA DE LAS DEMAS CON EL PROPOSITO DE ATRIBUIRLE UNA IMAGEN DE FONDO ESPECIFICA A CADA TARJETA SEGUN
+                        SU CLASE, EL ATRIBUTO DATA GENRE PERMITE QUE LA TARJETA SE INDENTIFICADA POR UN GENERO A LA HORA DE SER FILTRADA POR EL USUARIO,
+                        LA TARJETA LLEVA UN COLOR DE FONDO POR DEFECTO
+                    -->
+                    <div class="card card-hover tarjeta1" data-genre="drill"  style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <!--CONTENEDOR PARA ANIMACION DE PARTICULAS, LA ANIMACION SE ENCUENTRA SUPERPUESTA POR ENCIMA DE LA IMAGEN PRINCIPAL DE FONDO DE LA
+                            TARJETA, LAS CONFIGURACIONES REALIZADAS POR MEDIO DE CSS Y JS PERMITEN ADAPTARLO AL TAMAÑO DE LA TARJETA EN RELACION CON LOS
+                            ELEMENTOS DE LA MISMA SIN ALTERAR SU ORDEN ORIGINAL, LA ANIMACION TIENE LA CAPACIDAD DE MOVERSE Y SEGUIR EL RATON PERO FUE BLOQUEADA
+                            PARA NO INTERFERIR CON EL CORRECTO FUNCIONAMIENTO DE EL REPRODUCTOR DE MUSICA Y LOS DEMAS ELEMENTOS
+                        -->
+                        <div class="particles-container" id="particles-container"></div>
+                        <!--CUERPO DE TARJETA-->
+                        <div class="card-body">
+                            <!--TITULO Y SUBTITULO DE ARTISTA-->
+                            <h5 class="card-title text-light fade">MikeFuego <small style="font-size: 0.7em;">@ProdMikeFuego</small></h5>
+                            <!--
+                                CONTENTEDOR DE ELEMENTOS E INFORMACION DENTRO DE LA TARJETA, PERMITE AGREGAR FOTO DE ALBUM Y LOS DATOS
+                                RSPECTIVOS DE EL MISMO
+                            -->
+                            <div class="contenedor_imagen">
+                                <!-- LA IMAGEN ESTA CONFIGURADA PARA TENER UNA ANIMACION DE DESVANECIMIENTO EN EL MOMENTO QUE LA PAGINA CARGA
+                                    POR PRIMERA VEZ POR MEDIO DE LA CLASE "FADE"
+                                -->
+                                <img src="img/Album_1.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <!--CONTENEDOR PARA LA INFORMACION DE EL ALBUM, ESTA CONFIGURADO PARA ENCONTRARSE A LA DERECHA DE LA FOTO
+                                    ALBUM
+                                -->
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Kalahari - Two x Mikefuego</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Bran</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: January 2023</p>
+                                    <!--CONTENEDOR DE CARRITO DE COMPRAS Y BOTON DE PRECIO
+                                    -->
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 10%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 10.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>    
+                              <!--ESTE CONTENEDOR ALMACENA 2 CONTENEDORES, UNO DE ELLOS ALMACENA TRES IMAGENES LOS CUALES SIRVEN PARA 
+                                DAR UN ASPECTO MAS SOCIAL E INTERACTIVO CON LA TARJETA, EL SEGUNDO CONTENEDOR ALMACENA UN REPRODUCTOR DE MUSICA
+                                -->                        
+                              <div class="ContenedorMusicaLogos fade">
+                                <!--CONTENEDOR DE IMAGENES, CONFIGURADO PARA ENCOTRARSE UNO AL LADO DE OTRO, LA CLASE D-FLEX LO VUELVE FLEXIBLE
+                                    EL MT3 SEPARA DE FORMA ADYACENTE EL CONTENEDOR DE REPRODUCTOR MUSICAL, LA CLASE DIV1 POR MEDIO DE CSS PERMITE
+                                    POSICIONARLO A LA IZQUIERDA
+                                -->
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <!--CONTENEDOR DE REPRODUCTOR MUSICAL, EL MISMO CUENTA CON UNA CLASE DIV 2 LA CUAL PERMITE POSICIONARLO A LA DERECHA JUNTO
+                                    AL CONTENEDOR DE LAS 3 IMAGENES
+                                -->
+                                <div class="div2">
+                                    <!--EL REPRODUCTOR DE MUSICA, POSEE UN IDENTIFICADOR UNICO LLAMADO "AUDIO-PLAYER-1" ESTE IDENTIFICADOR ES
+                                        VITAL PARA LA EVITAR LA REPRODUCCION SIMULTANEA DE CANCIONES, POR MEDIO DE JS EXISTE UN APARTADO QUE
+                                        REGULA LAS REPRODUCCIONES POR MEDIO DE UNA VARIABLE QUE ALMACENA TODOS LOS ARCHIVOS DE AUDIO Y VERIFICA
+                                        CUAL SE ESTA REPRODUCIENDO Y EN EL MOMETNO QUE SE REPRODUZCA OTRA, LA ANTERIOR SE DETIENE.
+                                        CUANDO UNA CANCION SE REPRODUCE, REALIZA LA INVOCACION INMEDIATA DE UNA FUNCION QUE MUESTRA LA ANIMACION
+                                        DE PARTICULAS DENTRO DE LA TARJETA MUSICAL, EN CASO CONTRARIO DESAPARECE LA ANIMACION
+                                    -->
+                                    <audio id="audio-player-1" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/insane-noLyrics.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--DE AQUI EN ADELANTE, TODO LO ANTERIORMENTE EXPLICADO APLICA PARA LAS DEMAS TARJETAS, TODAS POSEEN LA MISMA CONFIGURACION-->
+                <li class="media">
+                    <div class="card card-hover tarjeta2" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;" data-genre="Trap">
+                        <div class="particle-container2" id="particles-container2"></div>
+                        <div class="card-body" >
+                            <h5 class="card-title text-light fade">TwoBite <small style="font-size: 0.7em;">@ProdtwoBite</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album4.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">[30+] SAMPLE PACK/LOOP KIT "Anomaly" [Southside, cubeatz]</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: TwoBite</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: February 2023</p>
+                                    <div class="contenedor_imagen_compra fade" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito">
+                                        <a href="#" class="btn btn-light">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                            <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>
+                            <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-2" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/JAEGER - Overdue [Bass Boosted] (1).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta3" data-genre="Trap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Black Rose Society <small style="font-size: 0.7em;">@BlackRoseSociety</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Reflections_vol.1.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Reflections - Black Rose Society</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Black Rose Society</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: January 2022</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-3" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/RFTS_VOL1.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta4" data-genre="Trap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Black Rose Society <small style="font-size: 0.7em;">@BlackRoseSociety</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Reflections_vol2.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Reflections Vol. 2 - Black Rose Society</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Black Rose Society</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: june 2022</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-4" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/RFTS_VOL2.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta5" data-genre="Trap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Black Rose Society <small style="font-size: 0.7em;">@BlackRoseSociety</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Reflections_vol3.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Reflections Vol. 3- Black Rose Society</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Black Rose Society</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: november 2022</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 15.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-5" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/RFTS_VOL3.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta6" data-genre="drill" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">King <small style="font-size: 0.7em;">@ProdByKing</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album2.jpg" style="border: 2px solid white;" alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">PELIGROS - Prod. King</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: King</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: February 2022</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                           
+                            <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-6" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/_PELIGROS_ - BASE DE DRILL _ Beat Drill Agresivo Uso Libre _ Bases De Drill _ - SPANISHDRILL - ukdrill.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta7" data-genre="BoomBap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Eminem <small style="font-size: 0.7em;">@EMINEM</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Tupac_Biggie.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">RUNNIN [Dying to live] - Prod. Eminem</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Eminem</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: February 1998</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 45.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-7" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Intro Tupac & Biggie Runnin Instrumental ( 256kbps cbr ).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta8" data-genre="BoomBap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Nathy Peluso <small style="font-size: 0.7em;">@NathyPeluso</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/album13.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Business Woman - Nathy Peluso</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Nathy Peluso</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: February 2020</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 35.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-8" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Nathy Peluso - BUSINESS WOMAN (Instrumental with Backing Vocals).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta9" data-genre="Hip-Hop" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Skriptonite <small style="font-size: 0.7em;">@TheRealScrip</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/album12.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Polozhenie [Izzmuzzic Remix] - Skryptonite</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Skryptonite</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: July 2021</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 35.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-9" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Legend - Scriptonite - Polozhenie (instrumental slowed) ( 256kbps cbr ).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta10" data-genre="BoomBap" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Black Rose Society <small style="font-size: 0.7em;">@BlackRoseSociety</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album11.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Born Sinner Vol. 4: Outlaw Street - Black Rose Society</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Black Rose Society</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: December 2021</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-10" controls class="audio">
+                                        <source src="mp3/OUTLAW STREET.mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta11" data-genre="drill" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">2300 X 29 <small style="font-size: 0.7em;">@Prod.2300x29</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album7.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Caution - Dthang</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: 2300x29</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: march 2020</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 20.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-11" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/DThang - Caution (OFFICIAL INSTRUMENTAL) (Prod. 2300 Beats x 29).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta12" data-genre="Hip-Hop" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">NOXERO <small style="font-size: 0.7em;">@NOXERO</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album6.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;"> [70+] SAMPLE PACK/DRUM KIT "Hypertrak" [Southside,808beatz]- NOXERO</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: NOXERO</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: march 2017</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 50.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-12" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/DThang - Caution (OFFICIAL INSTRUMENTAL) (Prod. 2300 Beats x 29).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta13" data-genre="Hip-Hop" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">IGAZI <small style="font-size: 0.7em;">@IGAZI</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album3.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;"> [300+] SAMPLE PACK/DRUM KIT "Paranoia" [NardoWick,808beatz]- IGAZI</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: IGAZI</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: november 2023</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 75.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-13" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/DThang - Caution (OFFICIAL INSTRUMENTAL) (Prod. 2300 Beats x 29).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta14" data-genre="Reggaeton" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Victor el Nazi <small style="font-size: 0.7em;">@VNZ</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album15.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Sexy Movimiento [INSTRUMENTAL]- Wisin & Yandel</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: VictorElNazi</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: november 2007</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 35.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-14" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Sexy Movimiento ( 256kbps cbr ).mp3"type="audio/mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta15" data-genre="Reggaeton" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Karol G <small style="font-size: 0.7em;">@Bichota</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album14.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">EL MAKINON [INSTRUMENTAL]- Karol G feat Mariah Angeliq</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: KarolG</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: november 2021</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 60.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-15" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Karol G, Mariah Angeliq - El Makinon _Instrumental Oficial de Estudio_.mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta16" data-genre="Reggaeton" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Fresh dr <small style="font-size: 0.7em;">@FreshDR</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album16.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">SATURNO - Bad Bunny X Jhay Cortez [Type Beat]</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Fresh Dr</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: December 2021</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 60.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-16" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Bad Bunny x Jhay Cortez Type Beat - “SATURNO” _ Reggaeton Type Beat 2022_vTV7Mrx-4Cc.mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta17" data-genre="Rock" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Linkin Park <small style="font-size: 0.7em;">@LP</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album17.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">New Divide [INSTRUMENTAL] - Linkin Park</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Linkin Park</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: January 2008</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 90.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-17" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/New Divide - Linkin Park (Official Instrumental).mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta18" data-genre="Rock" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">System of Down <small style="font-size: 0.7em;">@System of Down</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album18.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Chop Suey [INSTRUMENTAL] - System of a Down</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: System of Down</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: August 2001</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 90.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-18" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/System of a Down - Chop Suey official instrumental.mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="card card-hover tarjeta19" data-genre="Rock" style="background-color: rgb(31, 27, 27); margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fade">Skillet <small style="font-size: 0.7em;">@Skillet</small></h5>
+                            <div class="contenedor_imagen">
+                                <img src="img/Album19.jpg" style="border: 2px solid white;"alt="Descripción de la imagen" class="fade">
+                                <div style="width: 500px;">
+                                    <h2 class="text-light fade" style="padding-left: 5%;">Not Gonna Die [INSTRUMENTAL] - Skillet</h2>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%; margin-top: 5%;"> Beat by: Skillet</p>
+                                    <p class="text-light fade" style="padding-left: 5%; margin-bottom: 2%;"> Released: August 2001</p>
+                                    <div class="contenedor_imagen_compra" style="width: 30%; height: 60%; margin-left: 5%; margin-top: 6%;">
+                                        <img src="img/carshop_white.png" alt="carrito" class="fade">
+                                        <a href="#" class="btn btn-light fade">$ 90.00</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <a href="#" class="btn btn-dark" style="margin-top: 2%;">Más acerca de</a>                            
+                              <div class="ContenedorMusicaLogos fade">
+                                <div class="d-flex mt-3 div1">
+                                    <img src="img/heart (2).png" alt="corazon" style="margin-left: 5%;">
+                                    <img src="img/comment (2).png" alt="comentarios" style="margin-left: 25%;">
+                                    <img src="img/share (2).png" alt="compartir" style="margin-left: 30%;">
+                                </div>
+                                <div class="div2">
+                                    <audio id="audio-player-19" controls class="audio" onplay="showParticles()" onpause="hideParticles()">
+                                        <source src="mp3/Skillet - Not Gonna Die _Instrumental_.mp3">
+                                      </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li><!--FIN DE LA ULTIMA LISTA-->
+            </ul><!--FIN DE LISTAS-->
+        </div><!--FIN DE CONTENEDOR 2-->
+    </div><!--FIN CONTENEDOR PRINCIPAL-->
+    <!--SCRIPTS BOOTSTAP Y ENLACES JS-->
+
+
+
+    
+
+
+
+
+
+
+
+    <script src="JS/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+   
+</body>
+
+
+
+
+</html>
