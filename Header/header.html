@@ -5,24 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/ProyectoWebUtn2023/Header/Header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>header</title>
 </head>
 <body>
     <header class="header"> 
-        <div class="LogoBlackRose"><!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
-        <!----><img src="/ProyectoWebUtn2023/Header/Imagenes/LogoBlackRose.png" alt="Logo BlackRose">
+        <div class="LogoBlackRose" style=" margin-top: 10px;"><!--Hice una clase para el css con el fin de darle disehno al logo BlackRose del menu-->  
+        <!---->
+        
+        <a href="/ProyectoWebUtn2023/index.html"><img src="/ProyectoWebUtn2023/Header/Imagenes/LogoBlackRose.png" alt="Logo BlackRose"></a>
+
+       
+
         </div>
         <nav>
         <ul class="nav-links"> <!--Hice una clase para el css con el fin de darle disehno-->  
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Membresías</a></li>
+                <!--<li><a href="#">Servicios</a></li>-->
+                <li><a href="/ProyectoWebUtn2023/feed/index.html">Feed</a></li>
+                <li><a href="/ProyectoWebUtn2023/P.Membresia/Membresia.html">Membresías</a></li>
                 <li><a href="/ProyectoWebUtn2023/F.Contacto/FormularioContacto.html">Contactenos</a></li>
 
 
                 <!--CARRITO DE COMPRAS USANDO BOOSTRAB-->
                 <!--No tiene funcionalidad por el momento-->
-                <li><a href="#" class="material-symbols-outlined">
+                <li><a href="#" class="material-symbols-outlined bi bi-heart mt-3">
                     shopping_cart_checkout
                  </a></li>
                  <!--Cierre del carrito de compras usado con boostrap-->

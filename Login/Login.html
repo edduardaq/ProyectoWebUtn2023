@@ -7,7 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="/ProyectoWebUtn2023/Login/Css/Login.css">
 </head>
-<body>
+<body style="background-color: #000000;">
     
     <div class="container">
         <div class="form-box">
@@ -25,14 +25,30 @@
                 <input type="text" class="input-field" placeholder="Nombre de Usuario" required>
                 <input type="password" class="input-field" placeholder="Contraseña" required>
                 <input type="checkbox" class="check-box"> <span>Recordar Contraseña</span>
-                <button type="submit" class="submit-btn">Acceder</button>
+                <!-- ABOTON PARA REACCION A LA PAGINA INICIAL -->
+                <a href="/ProyectoWebUtn2023/index.html" style=" text-decoration:none; color:#060606;"><button type="button" class="btn btn-primary toggle-btn submit-btn" 
+                    style="background-color: 
+                    #000000;
+                    border-radius: 20px;
+                    color: #fff; ">Acceder</button></a>
             </form>
             <form id="registrar" class="input-group">
                 <input type="text" class="input-field" placeholder="Nombre de Usuario" required>
                 <input type="email" class="input-field" placeholder="Correo" required>
                 <input type="password" class="input-field" placeholder="Contraseña" required>
                 <input type="checkbox" class="check-box"> <span>Acepto los terminos y condiciones</span>
-                <button type="submit" class="submit-btn">Registrar</button>
+
+              <form>
+                <!-- ABOTON PARA REACCION A LA PAGINA INICIAL -->
+                <a href="/ProyectoWebUtn2023/index.html" style=" text-decoration:none; color:#000000;"><button type="button" class="btn btn-primary toggle-btn submit-btn" 
+                 style="background-color: 
+                 #000000;
+                 border-radius: 20px;
+                 color: #fff; ">Registrate</button></a>
+
+
+              </form>
+
                 
             </form>
         </div>

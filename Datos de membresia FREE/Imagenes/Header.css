@@ -23,8 +23,8 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 95px;
-    padding: 8px 10%;
+    height: 75px;
+    padding: 5px 10%;
 }
 
 .header .LogoBlackRose{

@@ -8,7 +8,7 @@
 .container{
     height: 100%;
     width: 100%;
-    background-image: url(/ProyectoWebUtn2023/Login/ImagenesLogin/Imagen2.jfif);
+    background-color: #000000d5;
     background-size: cover;
     position: absolute;
     background-size: 50%;
@@ -92,7 +92,7 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, rgba(5, 5, 5, 0.7), rgba(132, 126, 126, 0.7));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(132, 126, 126, 0.7));
     border: 0px;
     outline: none;
     border-radius: 30px;
